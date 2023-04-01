@@ -30,7 +30,7 @@ SELECT a.NOMBRE, a.apellido, a.carrera_id,
 FROM platzi.alumnos as a
 	FULL OUTER JOIN platzi.carreras AS c 
 	ON a.carrera_id = c.id
-WHERE a.carrera_id IS NULL OR c.id IS NULL
+WHERE a.carrera_id IS NULL OR c.id IS NULL -- Al retirar esta linea toma la union de los dos conjuntos
 ORDER BY a.carrera_id DESC, c.id DESC;
 
 
